@@ -10,11 +10,52 @@
   <body>
     <main>
       <div class="container">
-        <h1 class="main-title">
-          <span class="main-title-gradient">Snackbar</span>
+        <h1>
+          <span>Snackbar</span>
         </h1>
         <load src="./partials/back-link.html" />
       </div>
+      <form class="form">
+        <label class="label-delay">
+          Delay (ms)
+          <input
+            type="number"
+            name="delay"
+            id="delay"
+            class="input-style"
+            required
+          />
+        </label>
+
+        <fieldset class="form-filedset">
+          <legend class="form-legend">State</legend>
+          <label class="radio-label">
+            <input
+              class="input-fulfilled"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label class="radio-label">
+            <input
+              class="input-rejected"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button class="submit-btn general-btn" type="submit">
+          Create notification
+        </button>
+      </form>
+
       <script type="module" src="./js/2-snackbar.js"></script>
     </main>
   </body>
