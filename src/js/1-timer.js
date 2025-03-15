@@ -6,6 +6,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const button = document.querySelector(".start-btn");
+button.setAttribute('disabled', true);
 const dateInput = document.getElementById("datetime-picker");
 const timerDays = document.querySelector('[data-days]');
 const timerHours = document.querySelector('[data-hours]');
@@ -33,7 +34,7 @@ const options = {
         position: 'topRight',
         timeout: 3000,
       });
-        button.setAttribute('disabled', true);
+      button.setAttribute('disabled', true);
     } else {
       button.removeAttribute('disabled');
     }
@@ -56,7 +57,7 @@ function countdownInterval() {
   const timeLeft = countdownDate - now;
     if (timeLeft <= 0) {
     clearInterval(timer);
-    button.removeAttribute('disabled');
+    // button.removeAttribute('disabled');
     dateInput.removeAttribute('disabled');
     return;
   }
